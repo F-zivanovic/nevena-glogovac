@@ -12,12 +12,7 @@
   }
 
   &__link {
-    color: $primary-color;
     font-size: 0.9rem;
-
-    &:hover {
-      color: $secondary-color;
-    }
   }
 
   &__link--location {

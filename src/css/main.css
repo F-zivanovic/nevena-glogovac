@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   line-height: 1.4;
+  color: #225140;
 }
 
 h1,
@@ -28,7 +29,11 @@ h6 {
 }
 
 a {
+  color: #225140;
   transition: 0.4s linear;
+}
+a:hover {
+  color: #e2b02b;
 }
 
 img {
@@ -68,11 +73,7 @@ section {
   gap: 0;
 }
 .top-nav__link {
-  color: #225140;
   font-size: 0.9rem;
-}
-.top-nav__link:hover {
-  color: #e2b02b;
 }
 .top-nav__link--location {
   padding-right: 0.5rem;
@@ -89,6 +90,89 @@ section {
 }
 .top-nav .icon {
   margin-right: 1rem;
+}
+
+.nav {
+  padding: 1rem 0;
+  position: relative;
+}
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0;
+}
+.nav__logo {
+  align-items: center;
+  display: flex;
+}
+.nav__logo img {
+  width: 50px;
+}
+.nav__logo p {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+  .nav__logo p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .nav__logo p {
+    font-size: 1.2rem;
+  }
+}
+.nav__list {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 1200px) {
+  .nav__list {
+    position: absolute;
+    top: 100%;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: 0.2s linear;
+    background-color: #fff;
+    padding: 2rem 10%;
+    flex-direction: column;
+    align-items: flex-start;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+.nav__list.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.nav__link:hover::after {
+  width: 100%;
+  transition: 0.4s linear;
+}
+.nav__link::after {
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #225140;
+  content: "";
+}
+.nav__hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .nav__hamburger {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .nav__hamburger {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

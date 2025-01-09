@@ -18,6 +18,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   line-height: 1.4;
+  color: $primary-color;
 }
 
 h1,
@@ -30,7 +31,12 @@ h6 {
 }
 
 a {
+  color: $primary-color;
   transition: 0.4s linear;
+
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 img {
