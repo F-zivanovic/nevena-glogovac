@@ -36,6 +36,23 @@
   }
 }
 
+@mixin btn(
+  $bg: $primary-color,
+  $color: $white-color,
+  $bg-hover: none,
+  $color-hover: none,
+  $border-color-hover: none
+) {
+  background-color: $bg;
+  color: $color;
+
+  &:hover {
+    background-color: $bg-hover;
+    color: $color-hover;
+    border-color: $border-color-hover;
+  }
+}
+
 @mixin rwd($pixels, $type: max) {
   @media (#{$type}-width: #{$pixels}px) {
     @content;

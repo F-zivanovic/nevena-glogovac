@@ -1,0 +1,18 @@
+@use "../abstract/index" as *;
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid;
+  cursor: pointer;
+  width: 200px;
+  padding: 0.8rem 0;
+  text-align: center;
+  margin-top: 2rem;
+
+  @include rwd(576) {
+    font-size: 15px;
+  }
+}
