@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+  font-size: 100%;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", serif;
+}
+
+a {
+  transition: 0.4s linear;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+section {
+  padding: 90px 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
