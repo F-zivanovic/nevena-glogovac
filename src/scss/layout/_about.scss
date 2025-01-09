@@ -1,0 +1,59 @@
+@use "../abstract/index" as *;
+
+.about {
+  text-align: center;
+  background-color: #414131;
+  position: relative;
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $white-color;
+
+    @include rwd(768) {
+      font-size: 4rem;
+    }
+
+    @include rwd(576) {
+      font-size: 3rem;
+      padding: 0 5%;
+    }
+  }
+
+  &__text {
+    color: $white-color;
+    line-height: 1.8;
+    max-width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+
+    @include rwd(768) {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
+
+  &__cta {
+    @include btn(
+      $primary-color,
+      $white-color,
+      $primary-color,
+      transparent,
+      $white-color,
+      $white-color
+    );
+  }
+
+  &__img {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    opacity: 0.5;
+
+    @include rwd(992) {
+      display: none;
+    }
+  }
+}

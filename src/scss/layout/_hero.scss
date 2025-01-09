@@ -65,6 +65,13 @@
   }
 
   &__cta {
-    @include btn;
+    @include btn(
+      $primary-color,
+      $white-color,
+      $white-color,
+      $white-color,
+      $primary-color,
+      $white-color
+    );
   }
 }

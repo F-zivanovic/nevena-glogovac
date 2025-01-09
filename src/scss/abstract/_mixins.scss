@@ -39,12 +39,14 @@
 @mixin btn(
   $bg: $primary-color,
   $color: $white-color,
+  $border-color: $white,
   $bg-hover: none,
   $color-hover: none,
   $border-color-hover: none
 ) {
   background-color: $bg;
   color: $color;
+  border-color: $border-color;
 
   &:hover {
     background-color: $bg-hover;
