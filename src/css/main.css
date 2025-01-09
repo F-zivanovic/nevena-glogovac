@@ -327,4 +327,34 @@ section {
   }
 }
 
+.numbers {
+  background-color: #e7dbcf;
+}
+.numbers__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0;
+}
+@media (max-width: 768px) {
+  .numbers__wrapper {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+.numbers__item {
+  flex: 1;
+  text-align: center;
+}
+.numbers__number {
+  color: #000;
+  font-size: 3rem;
+}
+.numbers__text {
+  color: #225140;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=main.css.map */

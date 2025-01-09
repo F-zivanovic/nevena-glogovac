@@ -1,0 +1,30 @@
+@use "../abstract/index" as *;
+
+.numbers {
+  background-color: #e7dbcf;
+
+  &__wrapper {
+    @include flex(space-between, center);
+
+    @include rwd(768) {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    text-align: center;
+  }
+
+  &__number {
+    color: $black-color;
+    font-size: 3rem;
+  }
+
+  &__text {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
