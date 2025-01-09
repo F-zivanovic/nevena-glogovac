@@ -1,0 +1,43 @@
+@use "../abstract/index" as *;
+
+.top-nav {
+  @include rwd(992) {
+    display: none;
+  }
+  background-color: #f2f5f9;
+  padding: 0.5rem 0;
+
+  &__wrapper {
+    @include flex(space-between, center);
+  }
+
+  &__link {
+    color: $primary-color;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &__link--location {
+    padding-right: 0.5rem;
+    border-right: 1.5px solid $primary-color;
+
+    i {
+      margin-right: 0.4rem;
+    }
+  }
+
+  &__link--email {
+    padding-left: 0.5rem;
+
+    i {
+      margin-right: 0.4rem;
+    }
+  }
+
+  .icon {
+    margin-right: 1rem;
+  }
+}
