@@ -1,0 +1,80 @@
+@use "../abstract/index" as *;
+
+.faq {
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      color: $primary-color;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: $black-color;
+      font-size: 2.5rem;
+
+      @include rwd(576) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 70%;
+    margin: auto;
+
+    @include rwd(992) {
+      width: 80%;
+    }
+
+    @include rwd(576) {
+      width: 90%;
+    }
+  }
+
+  &__item {
+    border: 1px solid $tertiary-color;
+    padding: 2rem;
+    cursor: pointer;
+
+    &.active {
+      background-color: $primary-color;
+      color: $white-color;
+
+      .faq__name {
+        color: $white-color;
+      }
+    }
+  }
+
+  &__question {
+    @include flex(space-between, center);
+
+    i {
+      transition: 0.4s linear;
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__name {
+    color: $black-color;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s linear;
+    font-weight: 300;
+    font-size: 0.9rem;
+
+    &.active {
+      max-height: 20px;
+      margin-top: 1rem;
+    }
+  }
+}

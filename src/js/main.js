@@ -24,3 +24,29 @@ window.addEventListener("resize", () => {
     hamburgerIcon.setAttribute("aria-expanded", "false");
   }
 });
+
+// FAQ section
+const faqItems = document.querySelectorAll(".faq__item");
+
+faqItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const answer = item.querySelector(".faq__answer");
+    const arrowIcon = item.querySelector(".faq__icon");
+    const activeItem = item.classList.contains("active");
+
+    // Check if these elements exist
+    if (!answer || !arrowIcon) return;
+
+    faqItems.forEach((item) => {
+      item.classList.remove("active");
+      item.querySelector(".faq__answer").classList.remove("active");
+      item.querySelector(".faq__icon").classList.remove("active");
+    });
+
+    if (!activeItem) {
+      item.classList.add("active");
+      answer.classList.add("active");
+      arrowIcon.classList.add("active");
+    }
+  });
+});
