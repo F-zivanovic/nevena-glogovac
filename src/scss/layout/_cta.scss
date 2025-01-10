@@ -1,0 +1,49 @@
+@use "../abstract/index" as *;
+
+.cta {
+  background-color: $primary-color;
+  color: $white-color;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0;
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    letter-spacing: 1.5px;
+    font-weight: 900;
+  }
+
+  &__text {
+    margin-top: 1rem;
+
+    @include rwd(576) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__button {
+    @include btn(
+      $secondary-color,
+      $white-color,
+      $secondary-color,
+      transparent,
+      $white-color,
+      $secondary-color
+    );
+  }
+
+  &__zoom {
+    @include positioning(absolute, 50%, auto, auto, 50%);
+    color: #0b5cff;
+    font-weight: 900;
+    z-index: -1;
+    opacity: 0.2;
+    font-size: clamp(6rem, 10vw, 14rem);
+
+    @include rwd(768) {
+      opacity: 0.4;
+    }
+  }
+}
