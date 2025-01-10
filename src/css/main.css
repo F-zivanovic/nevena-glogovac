@@ -56,6 +56,12 @@ section {
   }
 }
 
+.section-header {
+  text-align: center;
+}
+.section-header__title {
+  color: #225140;
+}
 .btn {
   display: inline-block;
   font-weight: 500;
@@ -298,6 +304,8 @@ section {
   max-width: 80%;
   margin: auto;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 768px) {
   .about__text {
@@ -329,6 +337,7 @@ section {
 
 .numbers {
   background-color: #e7dbcf;
+  padding: 40px 0;
 }
 .numbers__wrapper {
   display: flex;
@@ -355,6 +364,120 @@ section {
   color: #225140;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.services {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+  gap: 0;
+}
+.services__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.services__header h2 {
+  color: #225140;
+  text-transform: uppercase;
+}
+.services__header h3 {
+  color: #000;
+  font-size: 2.5rem;
+}
+@media (max-width: 576px) {
+  .services__header h3 {
+    font-size: 2rem;
+  }
+}
+.services__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 0;
+  row-gap: 3rem;
+}
+.services__item {
+  flex: 0 0 31%;
+  padding: 2rem;
+  border: 1px solid #e7dbcf;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .services__item {
+    flex: 0 0 47%;
+  }
+}
+@media (max-width: 768px) {
+  .services__item {
+    flex: 0 0 100%;
+  }
+}
+.services__item:hover::after {
+  width: 100%;
+  transition: 0.4s linear;
+}
+.services__item::after {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  display: block;
+  content: "";
+  background-color: #225140;
+}
+.services__item--primary {
+  background-color: #225140;
+  color: #fff;
+}
+.services__item--primary:hover::after {
+  background-color: #e2b02b;
+  height: 5px;
+}
+.services__item--primary .services__text {
+  color: #fff;
+}
+.services__number {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3rem;
+}
+.services__name {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.services__text {
+  color: #000;
+  font-size: 0.9rem;
+}
+.services__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-flow: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.services__list span {
+  margin-right: 0.2rem;
+  color: #e2b02b;
+}
+.services__cta {
+  background-color: #225140;
+  color: #fff;
+  border-color: #225140;
+}
+.services__cta:hover {
+  background-color: transparent;
+  color: #225140;
+  border-color: #225140;
 }
 
 /*# sourceMappingURL=main.css.map */

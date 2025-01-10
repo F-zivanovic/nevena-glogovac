@@ -2,6 +2,7 @@
 
 .numbers {
   background-color: #e7dbcf;
+  padding: 40px 0;
 
   &__wrapper {
     @include flex(space-between, center);
