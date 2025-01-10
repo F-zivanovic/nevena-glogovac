@@ -1,0 +1,143 @@
+@use "../abstract/index" as *;
+
+.footer {
+  background-color: $primary-color;
+  padding-top: 90px;
+
+  &__wrapper {
+    @include flex(space-between, stretch, wrap);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 30px;
+
+    @include rwd(768) {
+      row-gap: 2rem;
+    }
+  }
+
+  &__item {
+    flex: 0 0 30%;
+
+    @include rwd(1200) {
+      flex: 0 0 48%;
+    }
+
+    @include rwd(768) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    text-transform: capitalize;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    color: $white-color;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  &__text {
+    color: $white-color;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    @include rwd(576) {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__icon {
+    @include icons(40px, 50%, $white-color);
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    color: $white-color;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  &__list {
+    @include flex(flex-start, stretch, column, 1rem);
+  }
+
+  &__Link {
+    color: $white-color;
+    text-transform: capitalize;
+
+    i {
+      margin-right: 0.3rem;
+    }
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    padding: 1rem;
+    color: $black-color;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  &__btn {
+    @include positioning(absolute, 50%, 5px);
+    background-color: $secondary-color;
+    padding: 0.7rem 0;
+    color: $white-color;
+    border-radius: 10px;
+    width: 80px;
+    cursor: pointer;
+    transition: 0.4s linear;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+    }
+  }
+
+  &__bottom {
+    @include flex(flex-start, center, row, 1rem);
+    padding: 50px 0;
+    @include rwd(576) {
+      display: none;
+    }
+
+    i {
+      @include icons(60px, 10px, $secondary-color, $white-color, 2rem);
+    }
+  }
+
+  &__email {
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: $white-color;
+  }
+
+  &__copyright {
+    border-top: 1px solid $tertiary-color;
+    padding: 1rem 0;
+    text-align: center;
+    color: $white-color;
+  }
+}
