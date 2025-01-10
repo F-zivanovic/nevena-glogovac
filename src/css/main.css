@@ -46,6 +46,11 @@ section {
   padding: 90px 0;
 }
 
+textarea,
+button {
+  font-family: "Roboto", serif;
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -74,6 +79,7 @@ section {
   text-align: center;
   margin-top: 2rem;
   text-transform: capitalize;
+  transition: 0.4s linear;
 }
 @media (max-width: 576px) {
   .btn {
@@ -486,7 +492,6 @@ section {
   text-align: center;
   position: relative;
   z-index: 1;
-  padding: 50px 0;
 }
 .cta__heading {
   text-transform: uppercase;
@@ -531,6 +536,82 @@ section {
   .cta__zoom {
     opacity: 0.4;
   }
+}
+
+.contact {
+  background-color: #225140;
+}
+.contact__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact__header h2 {
+  color: #e2b02b;
+  text-transform: uppercase;
+}
+.contact__header h3 {
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 550px;
+  margin: auto;
+}
+.contact__wrapper {
+  width: 45%;
+  margin: auto;
+}
+@media (max-width: 1200px) {
+  .contact__wrapper {
+    width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .contact__wrapper {
+    width: 90%;
+  }
+}
+.contact__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-flow: column;
+  gap: 0;
+  row-gap: 1rem;
+}
+.contact__form textarea {
+  resize: none;
+  height: 100px;
+}
+.contact__box {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .contact__box {
+    row-gap: 1rem;
+    flex-direction: column;
+  }
+}
+.contact__box input {
+  flex: 0 0 48%;
+}
+.contact__submit {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  align-self: center;
+}
+.contact__submit:hover {
+  background-color: #e2b02b;
+  color: #fff;
+  border-color: none;
+}
+.contact .form-control {
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.contact .form-control::placeholder {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

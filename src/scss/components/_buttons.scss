@@ -12,6 +12,7 @@
   text-align: center;
   margin-top: 2rem;
   text-transform: capitalize;
+  transition: 0.4s linear;
 
   @include rwd(576) {
     font-size: 15px;

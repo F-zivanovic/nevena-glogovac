@@ -48,3 +48,8 @@ img {
 section {
   padding: 90px 0;
 }
+
+textarea,
+button {
+  font-family: $text-font;
+}

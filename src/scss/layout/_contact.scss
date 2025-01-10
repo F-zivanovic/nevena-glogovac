@@ -1,0 +1,80 @@
+@use "../abstract/index" as *;
+
+.contact {
+  background-color: $primary-color;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      color: $secondary-color;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: $white-color;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      max-width: 550px;
+      margin: auto;
+    }
+  }
+
+  &__wrapper {
+    width: 45%;
+    margin: auto;
+
+    @include rwd(1200) {
+      width: 70%;
+    }
+
+    @include rwd(576) {
+      width: 90%;
+    }
+  }
+
+  &__form {
+    @include flex(flex-start, stretch, column);
+    row-gap: 1rem;
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    @include rwd(768) {
+      row-gap: 1rem;
+      flex-direction: column;
+    }
+
+    input {
+      flex: 0 0 48%;
+    }
+  }
+
+  &__submit {
+    @include btn(
+      transparent,
+      $white-color,
+      $white-color,
+      $secondary-color,
+      $white-color
+    );
+    align-self: center;
+  }
+
+  .form-control {
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+}
