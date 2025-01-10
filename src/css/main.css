@@ -67,6 +67,36 @@ button {
 .section-header__title {
   color: #225140;
 }
+.arrow__up {
+  position: fixed;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  width: auto;
+  height: auto;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #e2b02b;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  z-index: 1000;
+  transform: translateX(100px);
+  transition: 0.4s linear;
+}
+.arrow__up:hover {
+  background: transparent;
+  border: 2px solid #e2b02b;
+  color: #e2b02b;
+}
+.arrow__up.active {
+  transition: 0.4s linear;
+  transform: translateX(0);
+}
+
 .btn {
   display: inline-block;
   font-weight: 500;

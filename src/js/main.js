@@ -50,3 +50,18 @@ faqItems.forEach((item) => {
     }
   });
 });
+
+// Arrow up icon
+const arrowUp = document.querySelector(".arrow__up");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    arrowUp.classList.add("active");
+  } else {
+    arrowUp.classList.remove("active");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scroll({ top: 0, behavior: "smooth" });
+});
