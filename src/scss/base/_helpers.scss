@@ -8,14 +8,16 @@
   margin: auto;
 }
 
-.section-header {
+[class$="__header"] {
   text-align: center;
+  margin-bottom: 3rem;
 
-  &__title{
-    color: $primary-color;
+  [class$="__title"] {
+    text-transform: uppercase;
+    font-size: 1.3rem;
   }
 
-  &__subtitle{
-    
+  [class$="__subtitle"] {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
   }
 }

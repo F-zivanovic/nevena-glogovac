@@ -62,6 +62,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-scrollBtn.addEventListener("click", () => {
+arrowUp.addEventListener("click", () => {
   window.scroll({ top: 0, behavior: "smooth" });
 });
