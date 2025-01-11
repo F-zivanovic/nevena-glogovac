@@ -5,26 +5,28 @@
   padding: 40px 0;
 
   &__wrapper {
-    @include flex(space-between, center);
+    @include flex(space-between, center, wrap);
 
     @include rwd(768) {
-      flex-direction: column;
-      row-gap: 2rem;
+      row-gap: 1rem;
     }
   }
 
   &__item {
     flex: 1;
     text-align: center;
+
+    @include rwd(768) {
+      flex: 0 0 47%;
+    }
   }
 
   &__number {
     color: $black-color;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 
   &__text {
-    color: $primary-color;
     text-transform: uppercase;
     font-weight: 600;
   }

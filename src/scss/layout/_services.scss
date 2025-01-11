@@ -82,14 +82,7 @@
     }
   }
 
-  &__cta {
-    @include btn(
-      $primary-color,
-      $white-color,
-      $primary-color,
-      transparent,
-      $primary-color,
-      $primary-color
-    );
+  &__btn {
+    @include btn($primary-color, $primary-color, $primary-color);
   }
 }

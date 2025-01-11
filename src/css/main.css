@@ -306,15 +306,14 @@ button {
     max-width: none;
   }
 }
-.hero__cta {
-  background-color: #225140;
+.hero__btn {
+  background-color: transparent;
   color: #fff;
   border-color: #fff;
 }
-.hero__cta:hover {
+.hero__btn:hover {
   background-color: #fff;
   color: #225140;
-  border-color: #fff;
 }
 
 .about {
@@ -324,21 +323,10 @@ button {
 }
 .about__heading {
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: clamp(3rem, 6vw, 6rem);
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
-}
-@media (max-width: 768px) {
-  .about__heading {
-    font-size: 4rem;
-  }
-}
-@media (max-width: 576px) {
-  .about__heading {
-    font-size: 3rem;
-    padding: 0 5%;
-  }
 }
 .about__text {
   color: #fff;
@@ -352,18 +340,17 @@ button {
 @media (max-width: 768px) {
   .about__text {
     font-size: 1rem;
-    text-align: justify;
   }
 }
-.about__cta {
+.about__btn {
   background-color: #225140;
   color: #fff;
   border-color: #225140;
 }
-.about__cta:hover {
+.about__btn:hover {
   background-color: transparent;
-  color: #fff;
   border-color: #fff;
+  color: #fff;
 }
 .about__img {
   position: absolute;
@@ -385,25 +372,28 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-flow: row nowrap;
+  flex-flow: wrap;
   gap: 0;
 }
 @media (max-width: 768px) {
   .numbers__wrapper {
-    flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 1rem;
   }
 }
 .numbers__item {
   flex: 1;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .numbers__item {
+    flex: 0 0 47%;
+  }
+}
 .numbers__number {
   color: #000;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 .numbers__text {
-  color: #225140;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -497,15 +487,15 @@ button {
   margin-right: 0.2rem;
   color: #e2b02b;
 }
-.services__cta {
+.services__btn {
   background-color: #225140;
   color: #fff;
   border-color: #225140;
 }
-.services__cta:hover {
+.services__btn:hover {
   background-color: transparent;
-  color: #225140;
   border-color: #225140;
+  color: #225140;
 }
 
 .cta {
@@ -530,14 +520,13 @@ button {
   }
 }
 .cta__button {
-  background-color: #e2b02b;
-  color: #fff;
-  border-color: #e2b02b;
-}
-.cta__button:hover {
   background-color: transparent;
   color: #fff;
-  border-color: #e2b02b;
+  border-color: #fff;
+}
+.cta__button:hover {
+  background-color: #fff;
+  color: #225140;
 }
 .cta__zoom {
   position: absolute;
@@ -678,9 +667,8 @@ button {
   align-self: center;
 }
 .contact__submit:hover {
-  background-color: #e2b02b;
-  color: #fff;
-  border-color: none;
+  background-color: #fff;
+  color: #225140;
 }
 .contact .form-control {
   padding: 1rem;

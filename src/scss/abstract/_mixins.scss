@@ -38,20 +38,29 @@
 
 @mixin btn(
   $bg: $primary-color,
-  $color: $white-color,
-  $border-color: $white,
-  $bg-hover: none,
-  $color-hover: none,
-  $border-color-hover: none
+  $border-hover: $white-color,
+  $color-hover: $white-color
 ) {
   background-color: $bg;
-  color: $color;
-  border-color: $border-color;
+  color: $white-color;
 
-  &:hover {
-    background-color: $bg-hover;
-    color: $color-hover;
-    border-color: $border-color-hover;
+  @if ($bg == transparent) {
+    border-color: $white-color;
+
+    &:hover {
+      background-color: $white-color;
+      color: $primary-color;
+    }
+  } @else if ($bg == $primary-color) {
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $border-hover;
+      color: $color-hover;
+    }
+  } @else {
+    @content;
   }
 }
 

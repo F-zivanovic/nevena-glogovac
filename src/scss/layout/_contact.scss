@@ -54,13 +54,7 @@
   }
 
   &__submit {
-    @include btn(
-      transparent,
-      $white-color,
-      $white-color,
-      $secondary-color,
-      $white-color
-    );
+    @include btn(transparent);
     align-self: center;
   }
 

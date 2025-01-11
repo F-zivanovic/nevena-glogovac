@@ -7,19 +7,10 @@
 
   &__heading {
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: clamp(3rem, 6vw, 6rem);
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $white-color;
-
-    @include rwd(768) {
-      font-size: 4rem;
-    }
-
-    @include rwd(576) {
-      font-size: 3rem;
-      padding: 0 5%;
-    }
   }
 
   &__text {
@@ -33,19 +24,11 @@
 
     @include rwd(768) {
       font-size: 1rem;
-      text-align: justify;
     }
   }
 
-  &__cta {
-    @include btn(
-      $primary-color,
-      $white-color,
-      $primary-color,
-      transparent,
-      $white-color,
-      $white-color
-    );
+  &__btn {
+    @include btn($primary-color);
   }
 
   &__img {

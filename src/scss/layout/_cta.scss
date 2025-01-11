@@ -23,14 +23,7 @@
   }
 
   &__button {
-    @include btn(
-      $secondary-color,
-      $white-color,
-      $secondary-color,
-      transparent,
-      $white-color,
-      $secondary-color
-    );
+    @include btn(transparent);
   }
 
   &__zoom {
