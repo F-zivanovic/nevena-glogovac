@@ -65,3 +65,20 @@ document.addEventListener("scroll", () => {
 arrowUp.addEventListener("click", () => {
   window.scroll({ top: 0, behavior: "smooth" });
 });
+
+// Testimonial section
+const slides = document.querySelector(".testimonial__slides");
+const testimonials = document.querySelectorAll(".testimonial__item");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+let index = 0;
+
+function showTestimonial(newIndex) {
+  index = newIndex;
+  if (index < 0) index = testimonials.length - 1;
+  if (index >= testimonials.length) index = 0;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+prevButton.addEventListener("click", () => showTestimonial(index - 1));
+nextButton.addEventListener("click", () => showTestimonial(index + 1));

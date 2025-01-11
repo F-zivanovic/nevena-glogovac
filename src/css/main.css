@@ -549,6 +549,102 @@ button {
   }
 }
 
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 0;
+  background: #414131;
+  color: #fff;
+  position: relative;
+  padding: 60px 0;
+}
+.testimonial__header {
+  color: #fff;
+}
+.testimonial__wrapper {
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid #e2b02b;
+}
+@media (max-width: 992px) {
+  .testimonial__wrapper {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .testimonial__wrapper {
+    width: 90%;
+  }
+}
+.testimonial__slides {
+  display: flex;
+  transition: transform 0.4s linear;
+}
+.testimonial__item {
+  min-width: 100%;
+  padding: 3rem 0;
+  color: #fff;
+}
+.testimonial__img {
+  font-size: 3rem;
+}
+.testimonial__text {
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+.testimonial__author {
+  font-size: 1.1rem;
+}
+.testimonial__author a {
+  color: #e2b02b;
+  text-decoration: underline;
+}
+.testimonial__controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.testimonial__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #e2b02b;
+  color: #fff;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+.testimonial__btn:hover {
+  background-color: #e2b02b;
+}
+.testimonial__quote {
+  position: absolute;
+  color: #e2b02b;
+  font-size: 5rem;
+  top: 50px;
+}
+@media (max-width: 576px) {
+  .testimonial__quote {
+    display: none;
+  }
+}
+.testimonial__quote.fa-quote-left {
+  left: 50px;
+}
+.testimonial__quote.fa-quote-right {
+  right: 50px;
+}
+
 .faq__subtitle {
   color: #000;
 }

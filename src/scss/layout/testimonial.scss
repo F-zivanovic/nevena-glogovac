@@ -1,0 +1,99 @@
+@use "../abstract/index" as *;
+
+.testimonial {
+  @include flex(center, center, column);
+  background: #414131;
+  color: $white-color;
+  position: relative;
+  padding: 60px 0;
+
+  &__header {
+    color: $white-color;
+  }
+
+  &__wrapper {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid $secondary-color;
+
+    @include rwd(992) {
+      width: 80%;
+    }
+
+    @include rwd(576) {
+      width: 90%;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    transition: transform 0.4s linear;
+  }
+
+  &__item {
+    min-width: 100%;
+    padding: 3rem 0;
+    color: $white-color;
+  }
+
+  &__img {
+    font-size: 3rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    margin: 2rem 0;
+  }
+
+  &__author {
+    font-size: 1.1rem;
+    a {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    @include flex(center, center);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid $secondary-color;
+    color: $white-color;
+    background: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s linear;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  &__quote {
+    position: absolute;
+    color: $secondary-color;
+    font-size: 5rem;
+    top: 50px;
+
+    @include rwd(576) {
+      display: none;
+    }
+
+    &.fa-quote-left {
+      left: 50px;
+    }
+
+    &.fa-quote-right {
+      right: 50px;
+    }
+  }
+}
