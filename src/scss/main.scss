@@ -1,7 +1,6 @@
 // Abstract
 @use "abstract/variables";
 @use "abstract/mixins";
-@use "abstract/placeholders";
 
 // Base
 @use "base/base";
@@ -10,7 +9,6 @@
 // Components
 @use "components/arrow-up";
 @use "components/buttons";
-@use "components/mobile.menu";
 
 // Layout
 @use "layout/top-nav";

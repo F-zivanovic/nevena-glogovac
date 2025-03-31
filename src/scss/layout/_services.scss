@@ -3,39 +3,33 @@
 .services {
   @include flex(flex-start, center, column);
 
-  &__subtitle {
-    color: $black-color;
-  }
+  &__subtitle { color: $black-color; }
 
   &__wrapper {
-    @include flex(space-between, center, wrap);
+    @include flex(space-between, stretch, wrap);
     row-gap: 3rem;
   }
 
   &__item {
-    flex: 0 0 31%;
+    flex: 0 0 47%;
     padding: 2rem;
-    border: 1px solid $tertiary-color;
+    border: 2px solid $tertiary-color;
     position: relative;
 
-    @include rwd(1200) {
-      flex: 0 0 47%;
-    }
-
-    @include rwd(768) {
-      flex: 0 0 100%;
-    }
+    @include rwd(1200) { flex: 0 0 100%; }
 
     &:hover::after {
       width: 100%;
-      transition: 0.4s linear;
+      transition: 0.4s width linear;
     }
 
     &::after {
-      @include positioning(absolute, auto, auto, 0, 0, 0%, 2px);
+      @include position(absolute, auto, auto, 0, 0, 0%, 2px);
+      background-color: $primary-color;
+
+      height: 5px;
       display: block;
       content: "";
-      background-color: $primary-color;
     }
   }
 
@@ -43,19 +37,14 @@
     background-color: $primary-color;
     color: $white-color;
 
-    &:hover::after {
-      background-color: $secondary-color;
-      height: 5px;
-    }
+    &:hover::after { background-color: $secondary-color; }
 
-    .services__text {
-      color: $white-color;
-    }
+    .services__text { color: $white-color; }
   }
 
   &__number {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     font-size: 3rem;
   }
@@ -65,10 +54,12 @@
     font-size: 1.5rem;
     font-weight: 500;
     text-transform: capitalize;
+    max-width: 90%;
   }
 
   &__text {
     color: $black-color;
+
     font-size: 0.9rem;
   }
 
@@ -76,13 +67,14 @@
     @include flex(flex-start, stretch, column, 0.5rem);
     margin-top: 1rem;
 
-    span {
-      margin-right: 0.2rem;
-      color: $secondary-color;
+    li{
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
+
+    .fa-solid { color: $secondary-color; }
   }
 
-  &__btn {
-    @include btn($primary-color, $primary-color, $primary-color);
-  }
+  &__btn { @include btn($primary-color, $primary-color, $primary-color); }
 }

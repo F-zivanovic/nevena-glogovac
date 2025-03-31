@@ -7,36 +7,43 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  list-style-type: none;
   text-decoration: none;
   border: none;
   outline: none;
+  resize: none;
 }
 
 body {
+  color: $primary-color;
   font-family: $text-font;
-  font-size: 16px;
+
+  font-size: 100%;
   overflow-x: hidden;
   line-height: 1.4;
-  color: $primary-color;
+
+  @include rwd(576){ font-size: 85%; }
 }
+
+ul{ list-style-type: none; }
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: $headings-font;
-}
+h6 { font-family: $headings-font; }
 
 a {
   color: $primary-color;
+
   transition: 0.4s linear;
 
-  &:hover {
-    color: $secondary-color;
+  &:focus-visible {
+    text-decoration: underline;
+    outline: 1px dashed $secondary-color;
   }
+  
+  &:hover { color: $secondary-color; }
 }
 
 img {
@@ -45,11 +52,7 @@ img {
   vertical-align: middle;
 }
 
-section {
-  padding: 90px 0;
-}
+section { padding: 90px 0; }
 
 textarea,
-button {
-  font-family: $text-font;
-}
+button { font-family: $text-font; }

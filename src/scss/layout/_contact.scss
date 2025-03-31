@@ -1,70 +1,47 @@
 @use "../abstract/index" as *;
 
 .contact {
-  background-color: $primary-color;
+  background-color: $tertiary-color;
 
   &__header {
     width: 80%;
     margin: 0 auto 3rem;
   }
 
-  &__title {
-    color: $secondary-color;
-  }
+  &__title { color: $primary-color; }
 
-  &__subtitle {
-    color: $white-color;
-  }
-
-  &__wrapper {
-    width: 45%;
-    margin: auto;
-
-    @include rwd(1200) {
-      width: 70%;
-    }
-
-    @include rwd(576) {
-      width: 90%;
-    }
-  }
+  &__subtitle { color: $primary-color; }
 
   &__form {
-    @include flex(flex-start, stretch, column);
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: auto;
     row-gap: 1rem;
 
-    textarea {
-      resize: none;
-      height: 100px;
-    }
+    @include rwd(1200) { width: 70%; }
+    @include rwd(576) { width: 90%; }
+
+    textarea { height: 100px; }
   }
 
   &__box {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 
-    @include rwd(768) {
-      row-gap: 1rem;
-      flex-direction: column;
-    }
-
-    input {
-      flex: 0 0 48%;
-    }
-  }
-
-  &__submit {
-    @include btn(transparent);
-    align-self: center;
+    @include rwd(768) { flex-direction: column; }
   }
 
   .form-control {
+    width: 100%;
+    display: block;
     padding: 1rem;
     border-radius: 10px;
-    font-size: 1rem;
 
-    &::placeholder {
-      font-size: 1rem;
-    }
+    &::placeholder { font-size: 1rem; }
   }
+
+  &__submit { @include btn($primary-color, $primary-color, $primary-color); }
+
 }

@@ -1,38 +1,26 @@
 @use "../abstract/index" as *;
 
 .top-nav {
-  @include rwd(992) {
-    display: none;
-  }
+  @include flex(space-between, center);
   background-color: #f2f5f9;
-  padding: 0.5rem 0;
+  padding: 0.5rem 10%;
 
-  &__wrapper {
-    @include flex(space-between, center);
-  }
+  @include rwd(992) { display: none; }
 
   &__link {
     font-size: 0.9rem;
+
+    .fa-solid{ margin-right: 0.5rem; }
   }
 
   &__link--location {
     padding-right: 0.5rem;
     border-right: 1.5px solid $primary-color;
-
-    i {
-      margin-right: 0.4rem;
-    }
   }
 
-  &__link--email {
-    padding-left: 0.5rem;
+  &__link--email { padding-left: 0.5rem; }
 
-    i {
-      margin-right: 0.4rem;
-    }
-  }
-
-  .icon {
-    margin-right: 1rem;
+  .fa-brands{
+    &:not(:last-child){ margin-right: 0.5rem;}
   }
 }

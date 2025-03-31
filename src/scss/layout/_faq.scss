@@ -1,21 +1,17 @@
 @use "../abstract/index" as *;
 
 .faq {
-  &__subtitle {
-    color: $black-color;
-  }
+
+  &__header{ padding: 0 2rem; }
+
+  &__subtitle { color: $black-color; }
 
   &__wrapper {
-    width: 70%;
+    width: 60%;
     margin: auto;
 
-    @include rwd(992) {
-      width: 80%;
-    }
-
-    @include rwd(576) {
-      width: 90%;
-    }
+    @include rwd(992) { width: 80%; }
+    @include rwd(576) { width: 90%; }
   }
 
   &__item {
@@ -23,31 +19,33 @@
     padding: 2rem;
     cursor: pointer;
 
+    @include rwd(576){ padding: 1.5rem; }
+
     &.active {
       background-color: $primary-color;
       color: $white-color;
 
-      .faq__name {
-        color: $white-color;
-      }
+      .faq__name { color: $white-color; }
     }
   }
 
   &__question {
-    @include flex(space-between, center);
+    @include flex(space-between, center, row, 1rem);
 
-    i {
+    .fa-solid {
       transition: 0.4s linear;
-      &.active {
-        transform: rotate(180deg);
-      }
+      
+      &.active { transform: rotate(180deg); }
     }
   }
 
   &__name {
     color: $black-color;
+    
     font-size: 1.3rem;
     font-weight: 500;
+
+    @include rwd(576){ font-size: 1rem; }
   }
 
   &__answer {
@@ -56,10 +54,17 @@
     transition: 0.4s linear;
     font-weight: 300;
     font-size: 0.9rem;
+    line-height: 1.7;
 
     &.active {
-      max-height: 20px;
+      max-height: 200px;
       margin-top: 1rem;
     }
+  }
+
+  &__link{
+    text-decoration: underline;
+    color: $secondary-color;
+    font-weight: 500;
   }
 }

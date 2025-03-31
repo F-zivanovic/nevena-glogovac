@@ -1,33 +1,31 @@
 @use "../abstract/index" as *;
 
 .numbers {
-  background-color: #e7dbcf;
+  background-color: $primary-color;
+
   padding: 40px 0;
 
   &__wrapper {
-    @include flex(space-between, center, wrap);
-
-    @include rwd(768) {
-      row-gap: 1rem;
-    }
+    @include flex(space-between, stretch, wrap);
+    row-gap: 2rem;
   }
 
   &__item {
     flex: 1;
     text-align: center;
 
-    @include rwd(768) {
-      flex: 0 0 47%;
-    }
+    @include rwd(1200) { flex: 0 0 47%; }
+    @include rwd(768) { flex: 0 0 100%; }
   }
 
   &__number {
-    color: $black-color;
+    color: #fff;
     font-size: clamp(2rem, 5vw, 3rem);
   }
 
   &__text {
     text-transform: uppercase;
     font-weight: 600;
+    color: #fff;
   }
 }

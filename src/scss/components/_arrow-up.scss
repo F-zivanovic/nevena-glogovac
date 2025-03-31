@@ -1,7 +1,7 @@
 @use "../abstract/index" as *;
 
 .arrow__up {
-  @include positioning(fixed, auto, 20px, 20px, auto);
+  @include position(fixed, auto, 20px, 20px, auto);
   @include icons(40px, 50%, $secondary-color, $white-color);
   z-index: 1000;
   transform: translateX(100px);

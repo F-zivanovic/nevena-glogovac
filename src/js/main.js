@@ -1,19 +1,14 @@
-// Open mobile menu when click on Hamburger icon
-const hamburgerIcon = document.querySelector(".nav__hamburger");
-const mobileMenu = document.querySelector(".nav__list");
+// Open/close mobile menu
+const hamburgerIcon = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("nav-list");
 
-hamburgerIcon.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-  const isActive = mobileMenu.classList.contains("active");
-  hamburgerIcon.setAttribute("aria-expanded", isActive);
-});
+hamburgerIcon.addEventListener("click", () => { mobileMenu.classList.toggle("active"); });
 
 // Close mobile menu when click on someone link
 let mobileMenuLinks = document.querySelectorAll(".nav__link");
 mobileMenuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
-    hamburgerIcon.setAttribute("aria-expanded", "false");
   });
 });
 
@@ -21,7 +16,6 @@ mobileMenuLinks.forEach((link) => {
 window.addEventListener("resize", () => {
   if (window.innerWidth > 1200) {
     mobileMenu.classList.remove("active");
-    hamburgerIcon.setAttribute("aria-expanded", "false");
   }
 });
 
@@ -82,3 +76,6 @@ function showTestimonial(newIndex) {
 
 prevButton.addEventListener("click", () => showTestimonial(index - 1));
 nextButton.addEventListener("click", () => showTestimonial(index + 1));
+
+// Dynamic date
+document.getElementById("year").textContent = new Date().getFullYear();
