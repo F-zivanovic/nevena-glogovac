@@ -3,14 +3,17 @@
 .arrow__up {
   @include position(fixed, auto, 20px, 20px, auto);
   @include icons(40px, 50%, $secondary-color, $white-color);
+
   z-index: 1000;
   transform: translateX(100px);
   transition: 0.4s linear;
+  cursor: pointer;
 
   &:hover {
+    color: $secondary-color;
+
     background: transparent;
     border: 2px solid $secondary-color;
-    color: $secondary-color;
   }
 
   &.active {
