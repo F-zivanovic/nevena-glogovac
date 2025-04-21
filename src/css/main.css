@@ -562,12 +562,9 @@ button {
 .testimonial__item {
   color: #fff;
   min-width: 100%;
-  border: 2px solid red;
 }
 .testimonial img {
   height: 450px;
-  border: 2px solid red;
-  width: auto;
 }
 .testimonial__controls {
   display: flex;
