@@ -63,8 +63,9 @@
   }
 
   &__link{
-    text-decoration: underline;
     color: $secondary-color;
+
+    text-decoration: underline;
     font-weight: 500;
   }
 }

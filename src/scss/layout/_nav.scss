@@ -4,9 +4,18 @@
   padding: 1rem 0;
   position: relative;
 
-  &__wrapper { 
-    @include flex(space-between, center);
-   }
+  &.scrolled{
+    background-color: $white-color;
+
+    border-bottom: 2px solid $primary-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  &__wrapper { @include flex(space-between, center); }
 
   &__logo {
     align-items: center;

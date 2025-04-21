@@ -22,5 +22,8 @@
     font-size: 1.3rem;
   }
 
-  [class$="__subtitle"] { font-size: clamp(1.8rem, 5vw, 2.5rem); }
+  [class$="__subtitle"] { 
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+   }
 }

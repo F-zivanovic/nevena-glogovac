@@ -89,6 +89,7 @@ button {
 }
 [class$=__header] [class$=__subtitle] {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
 }
 
 .arrow__up {
@@ -173,6 +174,15 @@ button {
 .nav {
   padding: 1rem 0;
   position: relative;
+}
+.nav.scrolled {
+  background-color: #fff;
+  border-bottom: 2px solid #225140;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 .nav__wrapper {
   display: flex;
@@ -351,6 +361,7 @@ button {
 
 .numbers {
   background-color: #225140;
+  color: #fff;
   padding: 40px 0;
 }
 .numbers__wrapper {
@@ -376,13 +387,12 @@ button {
   }
 }
 .numbers__number {
-  color: #fff;
+  font-weight: 700;
   font-size: clamp(2rem, 5vw, 3rem);
 }
 .numbers__text {
   text-transform: uppercase;
   font-weight: 600;
-  color: #fff;
 }
 
 .services {
@@ -446,6 +456,7 @@ button {
   top: 20px;
   right: 20px;
   font-size: 3rem;
+  font-weight: 700;
 }
 .services__name {
   margin: 1rem 0;
@@ -548,25 +559,14 @@ button {
   transition: transform 0.4s linear;
 }
 .testimonial__item {
-  min-width: 100%;
   color: #fff;
+  min-width: 100%;
+  border: 2px solid red;
 }
 .testimonial img {
   height: 450px;
-}
-.testimonial__img {
-  font-size: 3rem;
-}
-.testimonial__text {
-  font-size: 1rem;
-  margin: 2rem 0;
-}
-.testimonial__author {
-  font-size: 1.1rem;
-}
-.testimonial__author a {
-  color: #e2b02b;
-  text-decoration: underline;
+  border: 2px solid red;
+  width: auto;
 }
 .testimonial__controls {
   display: flex;
@@ -593,8 +593,8 @@ button {
   background-color: #e2b02b;
 }
 .testimonial__quote {
-  position: absolute;
   color: #e2b02b;
+  position: absolute;
   font-size: 5rem;
   top: 50px;
 }
@@ -683,8 +683,8 @@ button {
   margin-top: 1rem;
 }
 .faq__link {
-  text-decoration: underline;
   color: #e2b02b;
+  text-decoration: underline;
   font-weight: 500;
 }
 
@@ -820,7 +820,6 @@ button {
   align-items: center;
   display: flex;
   gap: 0.5rem;
-  text-transform: capitalize;
 }
 .footer__text {
   color: #fff;
@@ -925,14 +924,20 @@ button {
   text-align: center;
 }
 .footer__email {
-  font-size: clamp(1rem, 5vw, 2rem);
   color: #fff;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 .footer__copyright {
+  color: #fff;
   border-top: 1px solid #e7dbcf;
   padding: 1rem 0;
   text-align: center;
+}
+.footer__copyright a {
   color: #fff;
+}
+.footer__copyright a:hover {
+  color: #e2b02b;
 }
 
 /*# sourceMappingURL=main.css.map */

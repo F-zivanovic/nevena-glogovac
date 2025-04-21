@@ -2,6 +2,7 @@
 
 .numbers {
   background-color: $primary-color;
+  color: $white-color;
 
   padding: 40px 0;
 
@@ -19,13 +20,12 @@
   }
 
   &__number {
-    color: #fff;
+    font-weight: 700;
     font-size: clamp(2rem, 5vw, 3rem);
   }
 
   &__text {
     text-transform: uppercase;
     font-weight: 600;
-    color: #fff;
   }
 }

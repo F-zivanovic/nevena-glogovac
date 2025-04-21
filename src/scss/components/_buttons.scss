@@ -12,7 +12,5 @@
   text-transform: capitalize;
   transition: 0.4s linear;
 
-  @include rwd(576) {
-    font-size: 15px;
-  }
+  @include rwd(576) { font-size: 15px;}
 }

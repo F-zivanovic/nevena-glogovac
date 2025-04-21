@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $primary-color;
-
+  
   padding-top: 70px;
 
   &__wrapper {
@@ -10,21 +10,14 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 30px;
 
-    @include rwd(768) {
-      row-gap: 2rem;
-    }
+    @include rwd(768) { row-gap: 2rem; }
   }
 
   &__item {
     flex: 0 0 30%;
 
-    @include rwd(1200) {
-      flex: 0 0 48%;
-    }
-
-    @include rwd(768) {
-      flex: 0 0 100%;
-    }
+    @include rwd(1200) { flex: 0 0 48%; }
+    @include rwd(768) { flex: 0 0 100%; }
   }
 
   &__logo {
@@ -34,7 +27,6 @@
     align-items: center;
     display: flex;
     gap: 0.5rem;
-    text-transform: capitalize;
   }
 
   &__text {
@@ -128,14 +120,22 @@
   }
 
   &__email {
-    font-size: clamp(1rem, 5vw, 2rem);
     color: $white-color;
+
+    font-size: clamp(1rem, 5vw, 2rem);
   }
 
   &__copyright {
+    color: $white-color;
+
     border-top: 1px solid $tertiary-color;
     padding: 1rem 0;
     text-align: center;
-    color: $white-color;
+
+    a{
+      color: $white-color;
+
+      &:hover{ color: $secondary-color;}
+    }
   }
 }
